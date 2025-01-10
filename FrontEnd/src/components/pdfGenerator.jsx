@@ -5,7 +5,7 @@ const PdfGenerator = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/fetch-data")
+    fetch("https://worksbyte-task.vercel.app/api/fetch-data")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error("Error fetching data:", err));
