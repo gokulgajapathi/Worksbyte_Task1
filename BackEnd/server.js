@@ -5,7 +5,7 @@ const cors = require("cors");
 const dataRoutes = require("./routes/data");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 dot.config();
 const corsOptions = {
   origin: process.env.APP_URL,
