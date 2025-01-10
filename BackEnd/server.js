@@ -18,6 +18,12 @@ mongoose.connect("mongodb+srv://admin:admin@gokulcluster.mvt7o.mongodb.net/task1
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+  app.get("/", (req, res) => {
+    
+      res.send("Task server");
+    
+  });
+
 app.use("/api", dataRoutes);
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
