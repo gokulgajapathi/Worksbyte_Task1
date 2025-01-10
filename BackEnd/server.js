@@ -29,6 +29,11 @@ mongoose.connect(process.env.MONGO_URL)
       res.send("Task server");
     
   });
+  app.get("/test", (req, res) => {
+      
+        res.send("Task server tested");
+      
+    });
 
 app.use("/api", dataRoutes);
 
