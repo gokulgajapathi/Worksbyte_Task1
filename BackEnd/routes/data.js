@@ -1,4 +1,3 @@
-// backend/routes/data.js
 const express = require("express");
 const router = express.Router();
 const DataModel = require("../models/DataModel");

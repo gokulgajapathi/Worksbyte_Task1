@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { jsPDF } from "jspdf";
 
+
+
+
 const PdfGenerator = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://worksbyte-task.vercel.app/api/fetch-data")
+    // console.log(process.env.REACT_APP_SERVER_URL);
+    fetch(`${import.meta.env.VITE_SERVER_URL}/api/fetch-data`)
+    // fetch("http://localhost:5000/api/fetch-data")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error("Error fetching data:", err));
