@@ -5,10 +5,14 @@ const dataRoutes = require("./routes/data");
 
 const app = express();
 const PORT = 5000;
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: 'GET'
+};
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 mongoose.connect("mongodb+srv://admin:admin@gokulcluster.mvt7o.mongodb.net/task1?retryWrites=true&w=majority&appName=GokulCluster", {
   // mongoose.connect("mongodb://localhost:27017/task1", {
